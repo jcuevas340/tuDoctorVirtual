@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleSheet.css">
+    <link rel="icon" type="image/x-icon" href="icons8-caduceo-50.png">    
+    <title>Tu Doctor Virtual</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Tu Doctor Virtual</a>
+        <div class="cont cont-menu">
+            <span class="material-symbols-outlined" id="icono-menu">menu</span>
+        </div>
+
+        <ul class="navegacion">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#consultaMedica">Consulta Medica</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+        </ul>
+    </header>
+
+    <section class="inicio" id="inicio">
+
+        <div class="txt-inicio">
+            <h1>Tu doctor de confianza de forma virtual</h1>
+            <p>Bienvenido a “Tu Doctor Virtual”.  La idea de esta pagina es ayudar a los pacientes a poder tener un diagnostico previo a una consulta medica para distintas enfermedades que no necesitan de un especialista para ser atendidas. <br>
+            <br>A continuacion respondera varias preguntas para que el sistema experto pueda determinar su malestar con los sintomas que ingrese al sistema.</p>
+            <a href="#consultaMedica" class="boton">Consulta medica</a>
+        </div>
+
+        <div class="img-inicio">
+            <img src="medicos-foto-home.jpg" alt="imagen principal">
+        </div>
+    </section>
+
+    <section class="consultaMedica" id="consultaMedica">
+        <form method="POST" action="/new-entry" id="formulario">
+            <h1>Consulta Medica</h1>
+            <h3>Instrucciones</h3>
+            <p>Paso 1: Llenar el apartado de "Datos del paciente" <br>
+                Paso 2: Responder cada una de las preguntas <br>
+                Paso 3: Dar clic en el boton de "Realizar consulta" <br>
+                Paso 4: Dar clic en el boton de "Resultados" y buscar tu correo
+            </p>
+            <div class="datosPaciente" id="datosPaciente">
+                <h2>Datos del paciente</h2>
+                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese sus nombres" required>
+                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus apellidos" required>
+                <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su email" required>
+            </div>
+            <br>
+            <div class="contenedor-consulta">
+                <div class="pregunta" id="p1">
+                    <h3>¿Presenta asfixia o dificultad para respirar?								
+                    </h3>
+                    <label>
+                        <input type="radio" name="p1" value="si"">
+                        <span>Si</span>
+                        <input type="radio" name="p1" value="no"">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p2">
+                    <h3>¿Presenta dolor en el pecho al respirar o toser?								
+                    </h3>
+                    <label>
+                        <input type="radio" name="p2" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p2" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p3">
+                    <h3>¿Presenta cansancio excesivo?								
+                    </h3>
+                    <label>
+                        <input type="radio" name="p3" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p3" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p4">
+                    <h3>¿Presenta fiebre mayor de 38.5 grados durante más de dos días?								
+                    </h3>
+                    <label>
+                        <input type="radio" name="p4" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p4" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p5">
+                    <h3>¿Presenta escurrimiento abundante en la nariz?								
+                    </h3>
+                    <label>
+                        <input type="radio" name="p5" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p5" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p6">
+                    <h3>¿Presenta tos?								
+                    </h3>
+                    <label>
+                        <input type="radio" name="p6" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p6" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p7">
+                    <h3>¿Presenta dolor de garganta?								
+                    </h3>
+                    <label>
+                        <input type="radio" name="p7" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p7" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p8">
+                    <h3>¿Presenta perdida de voz?								
+                    </h3>
+                    <label>
+                        <input type="radio" name="p8" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p8" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p9">
+                    <h3>¿Presenta secreción del oído?								
+                    </h3>
+                    <label>
+                        <input type="radio" name="p9" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p9" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p10">
+                    <h3>¿Su frecuencia respiratoria por minuto es mayor a 25?</h3>
+                    <label>
+                        <input type="radio" name="p10" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p10" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p11">
+                    <h3>¿Presenta coloración azul de la piel?</h3>
+                    <label>
+                        <input type="radio" name="p11" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p11" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p12">
+                    <h3>¿Presenta dolor o ardor al orinar?						
+                    </h3>
+                    <label>
+                        <input type="radio" name="p12" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p12" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p13">
+                    <h3>¿Va a orinar con más frecuencia de lo habitual?						
+                    </h3>
+                    <label>
+                        <input type="radio" name="p13" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p13" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p14">
+                    <h3>¿Siente la necesidad de ir a orinar a pesar de que la vejiga está vacía?						
+                    </h3>
+                    <label>
+                        <input type="radio" name="p14" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p14" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p15">
+                    <h3>¿Presenta sangre en la orina?						
+                    </h3>
+                    <label>
+                        <input type="radio" name="p15" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p15" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p16">
+                    <h3>¿Siente presión o retortijones en la ingle o en la parte inferior del abdomen?						
+                    </h3>
+                    <label>
+                        <input type="radio" name="p16" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p16" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p17">
+                    <h3>¿Presenta fiebre?					
+                    </h3>
+                    <label>
+                        <input type="radio" name="p17" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p17" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p18">
+                    <h3>¿Presenta escalofríos?						
+                    </h3>
+                    <label>
+                        <input type="radio" name="p18" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p18" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p19">
+                    <h3>¿Presenta dolor en la parte baja de la espalda o en el costado?						
+                    </h3>
+                    <label>
+                        <input type="radio" name="p19" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p19" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p20">
+                    <h3>¿Presenta nauseas o vómitos?					
+                    </h3>
+                    <label>
+                        <input type="radio" name="p20" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p20" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p21">
+                    <h3>¿Presenta diarrea acuosa?					
+                    </h3>
+                    <label>
+                        <input type="radio" name="p21" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p21" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p22">
+                    <h3>¿Presenta dolor o calambres en el abdomen?					
+                    </h3>
+                    <label>
+                        <input type="radio" name="p22" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p22" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p23">
+                    <h3>¿Presenta sed extrema o boca seca?						
+                    </h3>
+                    <label>
+                        <input type="radio" name="p23" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p23" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p24">
+                    <h3>¿Orina menos de lo normal?					
+                    </h3>
+                    <label>
+                        <input type="radio" name="p24" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p24" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p25">
+                    <h3>¿Presenta fatiga?						
+                    </h3>
+                    <label>
+                        <input type="radio" name="p25" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p25" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p26">
+                    <h3>¿Presenta orina de color oscuro?						
+                    </h3>
+                    <label>
+                        <input type="radio" name="p26" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p26" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p27">
+                    <h3>¿Presenta disminución de la turgencia de la piel?						
+                    </h3>
+                    <label>
+                        <input type="radio" name="p27" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p27" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p28">
+                    <h3>¿Presenta ojos o mejillas hundidos?						
+                    </h3>
+                    <label>
+                        <input type="radio" name="p28" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p28" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="pregunta" id="p29">
+                    <h3>¿Presenta mareos o desmayos?						
+                    </h3>
+                    <label>
+                        <input type="radio" name="p29" value="si">
+                        <span>Si</span>
+                        <input type="radio" name="p29" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="botones">
+                    <input class="boton"type="submit" value="Realizar Consulta">
+                    <a href="#resultados" class="boton">Ver resultados</a>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <section class="resultados" id="resultados">
+        <h1>Resultados</h1>
+        <div class="containerTabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th id="fecha">Fecha</th>
+                        <th id="correo">Correo</th>
+                        <th id="enfermedad">Enfermedad</th>
+                    </tr>
+                </thead>
+                <tbody id="res">
+                    <% pacientes.reverse().forEach(function (paciente){ %>
+                        <tr>
+                            <td><%= paciente.fecha %></td>
+                            <td><%= paciente.email %></td>
+                            <td><%= paciente.enfermedad %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
